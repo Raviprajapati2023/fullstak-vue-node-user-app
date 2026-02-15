@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${BACKEND_PORT:-3000}:3000"
+    volumes:
+      - ../backend:/app
+      - /app/node_modules
+    environment:
+      PGHOST: postgres
+      PGUSER: ${POSTGRES_USER:-postgres}
+      PGPASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      PGDATABASE: ${POSTGRES_DB:-fullstackapp}
+      PGPORT: 5432
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - app-network

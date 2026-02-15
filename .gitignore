@@ -1,0 +1,17 @@
+# Environment variables
+.env
+
+# Database data
+userdata/
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,8 @@
+include:
+  - compose/postgres.yml
+  - compose/backend.yml
+  - compose/frontend.yml
+
+networks:
+  app-network:
+    driver: bridge
