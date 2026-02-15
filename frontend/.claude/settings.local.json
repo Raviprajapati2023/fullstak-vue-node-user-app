@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(command -v:*)",
+      "Bash(source ~/.nvm/nvm.sh)",
+      "Bash(nvm --version:*)",
+      "Bash(nvm ls-remote:*)",
+      "Bash(nvm install:*)",
+      "Bash(nvm use:*)",
+      "Bash(npm --version)",
+      "Bash(nvm alias:*)"
+    ]
+  }
+}
